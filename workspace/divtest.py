@@ -1,30 +1,30 @@
 def alpha_6k1(n: int, k: int) -> int:
-    """ a(n) = ( 9*n + q + 2 ) / 6 """
+    """a(n) = ( 9*n + q + 2 ) / 6"""
     return k + ((n + (n << 1) + 1) >> 1)
 
 
 def gamma_6k1(n: int, k: int) -> int:
-    """ g(n) = ( 9*n + 2*q - 2 ) / 12 """
+    """g(n) = ( 9*n + 2*q - 2 ) / 12"""
     return k + ((n + (n << 1)) >> 2)
 
 
 def sigma_6k1(n: int) -> int:
-    """ s(n) = ( n - 2 ) / 4 """
+    """s(n) = ( n - 2 ) / 4"""
     return (n - 2) >> 2
 
 
 def alpha_6k5(n: int, k: int) -> int:
-    """ a(n) = ( 9*n + q + 1 ) / 6 """
+    """a(n) = ( 9*n + q + 1 ) / 6"""
     return k + ((n + (n << 1) + 2) >> 1)
 
 
 def gamma_6k5(n: int, k: int) -> int:
-    """ g(n) = ( 9*n + 2*q - 1 ) / 12 """
+    """g(n) = ( 9*n + 2*q - 1 ) / 12"""
     return k + ((n + (n << 1) + 3) >> 2)
 
 
 def sigma_6k5(n: int) -> int:
-    """ s(n) = ( n - 1 ) / 4 """
+    """s(n) = ( n - 1 ) / 4"""
     return (n - 1) >> 2
 
 
@@ -50,25 +50,25 @@ def is_a_divisible_by_b(a: int, b: int) -> bool:
     """
     Checks if 'a' is divisible by 'b' with the condition that both 'a' and 'b'
     must be congruent to either 1 or 5 modulo 6.
-    
+
     Note:
         This function uses a Python set to track visited values during the checking process.
         As a result, it may consume a lot of memory when testing with large numbers
         that generate large loops.
     """
-    
+
     assert (a % 6 == 1) or (a % 6 == 5)
     assert (b % 6 == 1) or (b % 6 == 5)
-    
+
     if (b % 6) == 1:
-        G = int((2*b - 2) / 3)
+        G = int((2 * b - 2) / 3)
         k = int((b - 1) / 6)
         col = lambda n: col_6k1(n, k)
     else:
-        G = int((2*b - 1) / 3)
+        G = int((2 * b - 1) / 3)
         k = int((b - 5) / 6)
         col = lambda n: col_6k5(n, k)
-    
+
     visited = set()
     n = a + G
 
@@ -78,7 +78,7 @@ def is_a_divisible_by_b(a: int, b: int) -> bool:
             break
         else:
             visited.add(n)
-    
+
     if n == G:
         return True
     else:
