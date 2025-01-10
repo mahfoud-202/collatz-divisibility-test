@@ -1,2 +1,22 @@
 # collatz-divisibility-test
-Proof-of-concept implementation of a divisibility test based on Collatz dynamics.
+
+## Overview
+
+This is a divisibility test based on the generalized Collatz $3n + q$ dynamics.
+
+It utilizes two frameworks:
+
+![functions](assets/functions.png)
+
+The function $f_{1}$ is used when $q \equiv 1 \pmod{6}$
+
+And the function $f_{2}$ is used when $q \equiv 5 \pmod{6}$
+
+### Pros
+
+- It uses only addition, shifting, and bitwise AND for checking.
+- If $a$ is divisible by $b$, it can provide the answer very quickly as a result of that.
+
+### Cons
+
+- If $a$ is not divisible by $b$, it can get stuck in an infinite loop. However, a deterministic test that can eventually halt is still fast but may consume more memory.
