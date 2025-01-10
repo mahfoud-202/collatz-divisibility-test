@@ -11,5 +11,9 @@ readme = "README.md"
 license = {text = "MIT"}
 
 
+[project.optional-dependencies]
+optional = [
+    "black>=24.10.0",
+]
 [tool.pdm]
 distribution = false
