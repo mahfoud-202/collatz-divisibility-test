@@ -19,4 +19,4 @@ And the function $f_{2}$ is used when $q \equiv 5 \pmod{6}$
 
 ### Cons
 
-- If $a$ is not divisible by $b$, and we use an implementation that relies solely on the operators mentioned above, this test can get stuck in an infinite loop. However, adopting an approach that employs strategies, such as hash tables or bit arrays, to track trajectories efficiently can still be fast but may consume more memory.
+- Memory consumption.
