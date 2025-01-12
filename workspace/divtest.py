@@ -48,8 +48,8 @@ def col_6k5(n: int, k: int = 1) -> int:
 
 def is_a_divisible_by_b(a: int, b: int) -> bool:
     """
-    Checks if 'a' is divisible by 'b' with the condition that both 'a' and 'b'
-    must be congruent to either 1 or 5 modulo 6.
+    Checks if 'a' is divisible by 'b' with the condition that 'b'
+    must be congruent to either 1 or 5 modulo 6 and 'a' >= 'b'.
 
     Note:
         This function uses a Python set to track visited values during the checking process.
@@ -57,7 +57,7 @@ def is_a_divisible_by_b(a: int, b: int) -> bool:
         that generate large loops.
     """
 
-    assert (a % 6 == 1) or (a % 6 == 5)
+    assert a >= b
     assert (b % 6 == 1) or (b % 6 == 5)
 
     if (b % 6) == 1:
@@ -86,7 +86,7 @@ def is_a_divisible_by_b(a: int, b: int) -> bool:
 
 
 def main() -> None:
-    print(is_a_divisible_by_b(715, 55))
+    print(is_a_divisible_by_b(55, 55))
 
 
 if __name__ == "__main__":
