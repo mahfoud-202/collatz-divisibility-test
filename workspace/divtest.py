@@ -52,9 +52,9 @@ def is_a_divisible_by_b(a: int, b: int) -> bool:
     must be congruent to either 1 or 5 modulo 6 and 'a' >= 'b'.
 
     Note:
-        This function uses a Python set to track visited values during the checking process.
-        As a result, it may consume a lot of memory when testing with large numbers
-        that generate large loops.
+        This function utilizes a Python set to keep track of visited values during the checking process. 
+        Consequently, it may consume a significant amount of memory when testing numbers 
+        that produce very large loops.
     """
 
     assert a >= b
