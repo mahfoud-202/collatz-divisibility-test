@@ -2,9 +2,9 @@
 
 ## Overview
 
-This is a divisibility test based on the generalized Collatz $3n + q$ dynamics.
+This is a divisibility test based on the dynamics of the generalized Collatz $3n + q$ variant function.
 
-It utilizes two frameworks:
+It utilizes two frameworks (maps):
 
 ![functions](assets/functions.png)
 
