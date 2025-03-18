@@ -51,7 +51,7 @@ def is_a_divisible_by_b(a: int, b: int) -> bool:
     Checks if 'a' is divisible by 'b' with the condition that 'b'
     must be congruent to either 1 or 5 modulo 6 and 'a' >= 'b'.
 
-    Note:
+    Caution:
         This function utilizes a Python set to keep track of visited values during the checking process. 
         Consequently, it may consume a significant amount of memory when testing numbers 
         that produce very large loops.
