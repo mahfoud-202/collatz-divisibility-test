@@ -20,3 +20,7 @@ And the function $f_{2}$ is used when $q \equiv 5 \pmod{6}$
 ### Cons
 
 - Memory consumption.
+
+## Acknowledgments
+
+A special thanks to Professor [G. Tony Jacobs](https://github.com/GTonyJacobs) for his insightful contributions to the study of the Collatz conjecture and his humility in sharing knowledge online, which deeply influenced my approach to learning and problem-solving.
